@@ -30,8 +30,15 @@ import PlaygroundSupport
 let canvas = Canvas(width: 300, height: 300)
 
 //drawing first line
-canvas.drawEllipse(centreX: 75, centreY: 250, width: 50, height: 50)
-canvas.drawEllipse(centreX: 75, centreY: 245, width: 50, height: 50)
+canvas.borderColor = Color(hue: 200, saturation: 100, brightness: 50, alpha: 100)
+canvas.fillColor = Color(hue: 200, saturation: 100, brightness: 50, alpha: 100)
+canvas.drawEllipse(centreX: 75, centreY: 250, width: 49, height: 50)
+
+canvas.borderColor = Color(hue: 200, saturation: 100, brightness: 50, alpha: 100)
+canvas.lineColor = Color(hue: 200, saturation: 100, brightness: 50, alpha: 100)
+for xPos in stride(from: 0, to: 125, by:4){
+    canvas.drawLine(fromX: 75, fromY: 250, toX: 75, toY: 100, lineWidth: 50)
+}
 
 
 /*:
